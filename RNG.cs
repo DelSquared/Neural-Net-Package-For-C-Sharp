@@ -48,7 +48,7 @@ namespace NeuroLib
             {
                 s = 0.025f;
             }
-			return (float)Maths.LogisticInverse(0.01f*(GenerateFromUniform(1,98)-m)/(2*s));
+			return (float)(Maths.LogisticInverse(0.01f*(GenerateFromUniform(1,98)))-m)/(2*s);
 		}
 
 		//----------------------------------------------------------------------------------------------
