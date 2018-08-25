@@ -61,8 +61,6 @@ namespace NeuroLib
 
             }
             brain.outputWeights = Matrix.Add(brain.outputWeights, Matrix.UniformRandomMatrix(brain.layerSize, brain.outputs, 0.5f, -0.5f), 1);
-
-
             return;
         }
         //Train function still in development----------------------------
@@ -76,13 +74,8 @@ namespace NeuroLib
                 {
                     float step = -rate * Matrix.Error(Y[j], y[j], "dMeanSquare");
                     brain.outputWeights = Matrix.Increment(brain.outputWeights,Matrix.Map(Y[j], "dLogistic"),step);
-
-
-
                 }
-
             }
-
             return;
         }
         //------------------------------------------------------------------
@@ -143,11 +136,8 @@ namespace NeuroLib
 
                         break;
                 }
-
-                
             }
             return frenkenstein;
         }
-
     }
 }
